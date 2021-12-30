@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg_mur"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <LinearLayout
+        android:id="@+id/fContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WEATHER IN CITY"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/f0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/f1"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Moscow                   -9C"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/f2"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Saint Petersburg     -6C"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/f3"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Samara                   -11C"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/f4"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Praha                         -2C"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/f5"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Boston                      +2C"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:layout_width="379dp"
+            android:layout_height="67dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="179dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C59BCC"
+                android:onClick="ClickBack"
+                android:text="Back" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

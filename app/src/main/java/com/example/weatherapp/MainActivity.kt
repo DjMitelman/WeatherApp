@@ -1,5 +1,6 @@
 package com.example.weatherapp
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
@@ -14,7 +15,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    val CITY: String = "dhaka,bd"
+    val CITY: String = "moscow,ru"
     val API: String = "06c921750b9a82d8f5d1294e1586276f" // Use API key
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,8 +60,6 @@ class MainActivity : AppCompatActivity() {
                 val updatedAt:Long = jsonObj.getLong("dt")
                 val updatedAtText = "Updated at: "+ SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH).format(Date(updatedAt*1000))
                 val temp = main.getString("temp")+"°C"
-                val tempMin = "Min Temp: " + main.getString("temp_min")+"°C"
-                val tempMax = "Max Temp: " + main.getString("temp_max")+"°C"
                 val pressure = main.getString("pressure")
                 val humidity = main.getString("humidity")
 
@@ -76,13 +75,8 @@ class MainActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.updated_at).text =  updatedAtText
                 findViewById<TextView>(R.id.status).text = weatherDescription.capitalize()
                 findViewById<TextView>(R.id.temp).text = temp
-                findViewById<TextView>(R.id.temp_min).text = tempMin
-                findViewById<TextView>(R.id.temp_max).text = tempMax
-                findViewById<TextView>(R.id.sunrise).text = SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(sunrise*1000))
-                findViewById<TextView>(R.id.sunset).text = SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(sunset*1000))
-                findViewById<TextView>(R.id.wind).text = windSpeed
-                findViewById<TextView>(R.id.pressure).text = pressure
-                findViewById<TextView>(R.id.humidity).text = humidity
+
+
 
                 /* Views populated, Hiding the loader, Showing the main design */
                 findViewById<ProgressBar>(R.id.loader).visibility = View.GONE
@@ -94,5 +88,11 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
+    }
+
+    fun Click(view: android.view.View) {
+        val intent = Intent(this@MainActivity, MurActivity::class.java)
+        startActivity(intent)
     }
 }
